@@ -71,15 +71,13 @@ section p {line-height: 1.3em!important; padding: 0 10px 5px!important;font-size
 #skills dl dd {background: #dfdfdf; display: inline; float: left; font-size: 0.8em; margin: 10px 4px; padding: 4px; -webkit-border-radius: 5px; border-radius: 5px; -webkit-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.35);  box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.35); cursor: default}
 #skills dl dd:hover {background-color: #ccc; -webkit-box-shadow: inset 0px 2px 1px 1px rgba(0, 0, 0, 0.15); box-shadow: inset 0px 2px 1px 1px rgba(0, 0, 0, 0.15); }
 
-#experience article {margin: 15px 0 37px 95px; padding-left: 5px; height: 320px; position: relative; border: 1px solid #FCFCFC}
+#experience article {margin: 0px; padding: 10px; position: relative; border: 1px solid #FCFCFC}
 #experience article:last-child {margin-bottom: 0}
 #experience article:hover {border: 1px dotted #ddd; background: #fefefe}
 #experience article h1 {border: none; font-size: 1.2em; font-style: italic; font-weight: bold; padding: 0; text-transform: none;}
 #experience article h1 a {color: #333; text-decoration: none}
 #experience article h1 a:hover {background-color: #333; color: #eee} 
 #experience article h1 span {color: #777; font-size: 0.8em; font-weight: normal;}
-#experience article h2 {background: #eee; display: inline; font-size: 0.9em; font-weight: normal; padding: 3px;}
-#experience article .start, #experience article .end {background: #fff; border-top: 1px dashed #ddd; font-size: 0.75em; left: -90px; padding: 4px 0; position: absolute; text-align: center; top: 19px; width: 90px;}
 #experience article .end {top: 0; border: none}
 #experience article p {font-size: 0.9em; line-height: 22px; margin: 10px 0 0; padding-left: 0;}
 
@@ -94,7 +92,7 @@ section p {line-height: 1.3em!important; padding: 0 10px 5px!important;font-size
 #languages ul li a:hover {background-color: #555; color: #eee; text-decoration: none}
 
 .experience_details {font-size: 0.9em; margin-left: 20px;}
-.experience_details li {margin: 10px 0; cursor: default}
+.experience_details li {margin: 10px 0; cursor: default;}
 
 pre {
     display: block;
@@ -151,11 +149,6 @@ pre {
 
 .entry-content h1, .entry-content h2, .comment-content h1, .comment-content h2 {
     color: #1D3F17;
-}
-
-#experience article h2 {
-    background: #455A64 !important;
-    color: white !important;
 }
 
 html, body{margin:0;padding:0;outline:0;display:block;font-family:'Roboto', sans-serif;font-size:15px;background-color:#fafafa;color:#606060;-webkit-overflow-scrolling:touch;-webkit-font-smoothing:subpixel-antialiased;-webkit-text-stroke:1px transparent;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;}
@@ -345,4 +338,21 @@ blockquote blockquote:before{display:none;}
     
 @media print {
     .page_break { display: block; page-break-before: always; }
+    .fn {font-size: 2.8em}
 }
+
+ #experience article h1 {
+     text-transform: capitalize ! important;
+ }
+ 
+ .experience_details li {
+     display:inline;
+ }
+ 
+ .experience_details li + li:before {
+     content: " · ";
+     font-size: 20px;
+ }
+ 
+ #experience article .start, #experience article .end {position: relative !important;}
+ #experience article .end {position: relative !important}
